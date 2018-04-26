@@ -8,6 +8,8 @@ import json
 # Create your views here.
 
 def index(request):
+    request.session['user'] = 'Voltaic'
+    print (request.session['user'])
     return render(request, 'chat/index.html', {})
 
 def room(request, room_name):
